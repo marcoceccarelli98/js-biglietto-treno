@@ -23,7 +23,8 @@ console.log(totalPrice);
 //     - 20% per i minorenni
 //     - 40% per gli over 65
 if (userAge < 18) {
-    totalPrice = (totalPrice / 100) * (100 - saleMinor);
+    // totalPrice = (totalPrice / 100) * (100 - saleMinor);
+    totalPrice = totalPrice - (totalPrice * (saleMinor / 100));
 }
 else if (userAge > 65) {
     totalPrice = (totalPrice / 100) * (100 - saleOver65);
