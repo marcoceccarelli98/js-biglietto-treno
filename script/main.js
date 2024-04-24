@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 // INPUTS
 // - definizione costante per input numero di km //kmToTravel
