@@ -20,16 +20,16 @@ console.log(sum);
 
 // - stabilisco la scelta del computer solo per la visualizzazione
 if (choiceEvenOrOdds == 'pari') {
-    cpuChoice = 'dispari'
+    cpuChoice = 'dispari';
 } else {
-    cpuChoice = 'pari'
+    cpuChoice = 'pari';
 }
 
 // - stabilisco il vincitore
 if ((choiceEvenOrOdds == 'pari' && sum % 2 === 0) || (choiceEvenOrOdds == 'dispari' && sum % 2 === 1)) {
-    result = 'hai vinto!'
+    result = 'hai vinto!';
 } else {
-    result = 'hai perso!'
+    result = 'hai perso!';
 }
 
 
