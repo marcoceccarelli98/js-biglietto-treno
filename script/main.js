@@ -76,9 +76,3 @@ buttonGenerate.addEventListener('click', function () {
 document.getElementById('pricekm').innerHTML = priceKm;
 document.getElementById('minorsale').innerHTML = saleMinor;
 document.getElementById('over65sale').innerHTML = saleOver65;
-// - visualizzo il prezzo del biglietto arrotondando a due cifre decimali
-
-
-
-
-
