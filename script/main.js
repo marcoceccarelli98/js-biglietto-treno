@@ -10,6 +10,7 @@ const saleOver65 = 40;
 
 let userAge = 0;
 let kmToTravel = 0;
+let totalPrice = 0;
 
 const buttonGenerate = document.getElementById('generate');
 
@@ -27,7 +28,7 @@ buttonGenerate.addEventListener('click', function () {
     console.log(kmToTravel);
 
     // - definizione variabile calcolo del prezzo totale (km * priceKm) //totalPrice 
-    let totalPrice = kmToTravel * priceKm;
+    totalPrice = kmToTravel * priceKm;
     console.log(totalPrice);
 
     // - calcolo eventuali sconti in base all'età
@@ -43,18 +44,17 @@ buttonGenerate.addEventListener('click', function () {
     console.log(totalPrice);
     console.log(Math.round(totalPrice * 100) / 100);
 
+    document.getElementById('totalprice').innerHTML = Math.round(totalPrice * 100) / 100;
 }
 )
 
 
 // OUTPUT
-// document.getElementById('distance').innerHTML = kmToTravel;
-// document.getElementById('age').innerHTML = userAge;
-// document.getElementById('pricekm').innerHTML = priceKm;
-// document.getElementById('minorsale').innerHTML = saleMinor;
-// document.getElementById('over65sale').innerHTML = saleOver65;
+document.getElementById('pricekm').innerHTML = priceKm;
+document.getElementById('minorsale').innerHTML = saleMinor;
+document.getElementById('over65sale').innerHTML = saleOver65;
 // - visualizzo il prezzo del biglietto arrotondando a due cifre decimali
-// document.getElementById('totalprice').innerHTML = Math.round(totalPrice * 100) / 100;
+
 
 
 
