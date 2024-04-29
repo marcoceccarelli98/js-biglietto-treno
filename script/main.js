@@ -13,12 +13,19 @@ let kmToTravel = 0;
 let userName = '';
 let totalPrice = 0;
 
+const elementNameInput = document.getElementById('name-input');
+const elementAge = document.getElementById('age');
+const elementKm = document.getElementById('km');
 const buttonGenerate = document.getElementById('generate');
+const buttonAbort = document.getElementById('abort');
 
+// ----------------
+// BUTTON GENERATE
+// ----------------
 buttonGenerate.addEventListener('click', function () {
-    const elementAge = document.getElementById('age');
-    const elementKm = document.getElementById('km');
-    const elementNameInput = document.getElementById('name-input');
+    // const elementNameInput = document.getElementById('name-input');
+    // const elementAge = document.getElementById('age');
+    // const elementKm = document.getElementById('km');
     let ticketType = 'Biglietto Standard';
     const cpCode = Math.floor(Math.random() * 99999);
 
@@ -68,9 +75,16 @@ buttonGenerate.addEventListener('click', function () {
     document.getElementById('offer').innerHTML = ticketType;
     document.getElementById('cp').innerHTML = cpCode;
     document.getElementById('totalprice').innerHTML = totalPrice;
-}
-)
+});
 
+// ----------------
+// BUTTON ABORT
+// ----------------
+buttonAbort.addEventListener('click', function () {
+    elementNameInput.value = '';
+    elementKm.value = '';
+    elementAge.value = '';
+});
 
 // OUTPUT
 document.getElementById('pricekm').innerHTML = priceKm;
