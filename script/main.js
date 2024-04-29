@@ -18,7 +18,9 @@ const buttonGenerate = document.getElementById('generate');
 buttonGenerate.addEventListener('click', function () {
     const elementAge = document.getElementById('age');
     const elementKm = document.getElementById('km');
-    const elementName = document.getElementById('name');
+    const elementNameInput = document.getElementById('name-input');
+    let ticketType = 'Biglietto Standard';
+    const cpCode = Math.floor(Math.random() * 99999);
 
     // - definizione costante per input età passeggero //userAge
     userAge = Number(elementAge.value);
@@ -26,7 +28,7 @@ buttonGenerate.addEventListener('click', function () {
     // - definizione costante per input numero di km //kmToTravel
     kmToTravel = Number(elementKm.value);
 
-    userName = elementName.value;
+    userName = elementNameInput.value;
     console.log(userName);
 
     console.log(userAge);
@@ -41,9 +43,11 @@ buttonGenerate.addEventListener('click', function () {
     //     - 40% per gli over 65
     if (userAge < 18) {
         totalPrice = totalPrice - (totalPrice * (saleMinor / 100));
+        ticketType = 'Sconto Minori';
     }
     else if (userAge > 65) {
         totalPrice = (totalPrice / 100) * (100 - saleOver65);
+        ticketType = 'Sconto Over 65';
     }
     console.log(totalPrice);
     console.log(Math.round(totalPrice * 100) / 100);
@@ -51,18 +55,19 @@ buttonGenerate.addEventListener('click', function () {
     document.getElementById('totalprice').innerHTML = Math.round(totalPrice * 100) / 100;
 
     // elementName.innerHTML = userName;
-    document.getElementById('name').innerHTML = userName;
 
     // TICKET VISUALIZATION
     const ticketTitle = document.getElementById('ticket-title');
     const ticket = document.getElementById('ticket');
 
-    ticketTitle.classList.toggle('d-none');
-    ticket.classList.toggle('d-none');
+    ticketTitle.classList.remove('d-none');
+    ticket.classList.remove('d-none');
 
 
-
-
+    document.getElementById('name').innerHTML = userName;
+    document.getElementById('offer').innerHTML = ticketType;
+    document.getElementById('cp').innerHTML = cpCode;
+    document.getElementById('totalprice').innerHTML = totalPrice;
 }
 )
 
