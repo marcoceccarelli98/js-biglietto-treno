@@ -10,6 +10,7 @@ const saleOver65 = 40;
 
 let userAge = 0;
 let kmToTravel = 0;
+let userName = '';
 let totalPrice = 0;
 
 const buttonGenerate = document.getElementById('generate');
@@ -17,12 +18,16 @@ const buttonGenerate = document.getElementById('generate');
 buttonGenerate.addEventListener('click', function () {
     const elementAge = document.getElementById('age');
     const elementKm = document.getElementById('km');
+    const elementName = document.getElementById('name');
 
     // - definizione costante per input età passeggero //userAge
     userAge = Number(elementAge.value);
 
     // - definizione costante per input numero di km //kmToTravel
     kmToTravel = Number(elementKm.value);
+
+    userName = elementName.value;
+    console.log(userName);
 
     console.log(userAge);
     console.log(kmToTravel);
@@ -35,7 +40,6 @@ buttonGenerate.addEventListener('click', function () {
     //     - 20% per i minorenni
     //     - 40% per gli over 65
     if (userAge < 18) {
-        // totalPrice = (totalPrice / 100) * (100 - saleMinor);
         totalPrice = totalPrice - (totalPrice * (saleMinor / 100));
     }
     else if (userAge > 65) {
@@ -45,6 +49,20 @@ buttonGenerate.addEventListener('click', function () {
     console.log(Math.round(totalPrice * 100) / 100);
 
     document.getElementById('totalprice').innerHTML = Math.round(totalPrice * 100) / 100;
+
+    // elementName.innerHTML = userName;
+    document.getElementById('name').innerHTML = userName;
+
+    // TICKET VISUALIZATION
+    const ticketTitle = document.getElementById('ticket-title');
+    const ticket = document.getElementById('ticket');
+
+    ticketTitle.classList.toggle('d-none');
+    ticket.classList.toggle('d-none');
+
+
+
+
 }
 )
 

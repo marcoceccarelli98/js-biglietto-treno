@@ -65,23 +65,39 @@
                     <button id="abort" class="btn mx-3 text-white bg-danger w-25">Annulla</button>
                 </div>
             </div>
-
             <div class="col-12">
-                <div
-                    class="card mb-5 d-flex h-100 justify-content-center text-center p-5 bg-primary text-white text-uppercase">
-                    <h2 class="fw-semibold fs-1">Totale Biglietto</h2>
-                    <h2 class="fw-bold fs-1 pt-4" id="totalprice">TotalPrice</h2>
+                <div id="ticket-title" class="pb-3 d-none content text-center">
+                    <h1 class="fw-bold">IL TUO BIGLIETTO</h1>
+                </div>
+            </div>
+            <div id="ticket" class="col-12 d-none">
+                <div class="d-flex text-center p-3 mb-5 bg-primary rounded">
+                    <div class="name py-3 border w-25">
+                        <h3 class="fw-semibold">Nome</h3>
+                        <h3 class="fw-bold pt-3" id="name">NomeCognome</h3>
+                    </div>
+                    <div class="offer py-3 border w-25">
+                        <h3 class="fw-semibold">Offerta</h3>
+                        <h3 class="fw-bold pt-3" id="offer">Offer</h3>
+                    </div>
+                    <div class="code py-3 border w-25">
+                        <h3 class="fw-semibold">Codice CP</h3>
+                        <h3 class="fw-bold pt-3" id="cp">CodiceCP</h3>
+                    </div>
+                    <div class="total py-3 border w-25">
+                        <h3 class="fw-semibold">Prezzo</h3>
+                        <h3 class="fw-bold pt-3" id="totalprice">Total</h3>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
 
 
-    <script src="./script/main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
+        <script src="./script/main.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
 </body>
 
 </html>
